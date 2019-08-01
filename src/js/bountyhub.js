@@ -123,7 +123,10 @@ App = {
           BountyHubInstance = instance;
           console.log(account);
           return BountyHubInstance.createSubmission(App.bountyID, URL, {from: account});
-        }); 
+        }).then(function()
+        {
+          location.reload();
+        });
       });
       event.preventDefault();
     });
