@@ -117,14 +117,13 @@ App = {
           console.log(error);
         }
         var account = accounts[0];
+        console.log(account);
         App.contracts.BountyHub.deployed().then(function(instance) 
         {
           BountyHubInstance = instance;
+          console.log(account);
           return BountyHubInstance.createSubmission(App.bountyID, URL, {from: account});
-        }).then(function()
-        {
-          location.reload();
-        });  
+        }); 
       });
       event.preventDefault();
     });
@@ -172,7 +171,7 @@ App = {
       } 
       submissionDiv.append(subTemplate.html());
     }
-    App.approveSub(web3.toWei(amt));
+    App.approveSub(amt);
     // App.deleteBounty();
   },
 
@@ -194,6 +193,7 @@ App = {
         App.contracts.BountyHub.deployed().then(function(instance) 
         {
           BountyHubInstance = instance;
+          console.log(acc);
           console.log(amt.toNumber());
           console.log(web3.toWei(amt));
           return BountyHubInstance.approveSubmission(App.bountyID, subID, {from: acc, value: amt});

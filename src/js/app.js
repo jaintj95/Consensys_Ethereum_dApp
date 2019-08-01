@@ -445,7 +445,7 @@ App = {
           BountyHubInstance = instance;
           console.log("in func");
           console.log(amt);
-          return BountyHubInstance.createBounty(desc, amt, {from: acc});
+          return BountyHubInstance.createBounty(desc, web3.toWei(Number(amt)), {from: acc});
         }).then(function()
         {
           location.reload();
@@ -506,7 +506,7 @@ App = {
       let bountyAmt = await BountyHubInstance.getBountyAmt(bountyIDs[i]);
       bountyTemplate.find('#bountyID').text(bountyIDs[i]);
       //bountyTemplate.find('#bountyAmt').text(web3.fromWei(bountyAmt));
-      bountyTemplate.find('#bountyAmt').text(bountyAmt);
+      bountyTemplate.find('#bountyAmt').text(web3.fromWei(bountyAmt));
       bountyTemplate.find('#bountyLink').text(bountyDesc);
       bountyTemplate.find('#bountyDesc').text(bountyDesc);
       
