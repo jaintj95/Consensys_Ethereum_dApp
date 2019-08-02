@@ -5454,6 +5454,12 @@
     "version": "0.5.8+commit.23d335f2.Emscripten.clang"
   },
   "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0x09957eA02AFa9182f1b22F152a1525d40FA7cd21",
+      "transactionHash": "0x2f79e74597223e3b4711162d4c5937cd5d793f73ead453b70fff8bafc1769cfb"
+    },
     "1564567160714": {
       "events": {},
       "links": {},
@@ -5480,7 +5486,7 @@
     }
   },
   "schemaVersion": "3.0.11",
-  "updatedAt": "2019-08-01T15:35:22.315Z",
+  "updatedAt": "2019-08-02T08:43:04.483Z",
   "devdoc": {
     "details": "Allows Hub-admin to add and remove Job posters and allows Job posters to request access",
     "methods": {

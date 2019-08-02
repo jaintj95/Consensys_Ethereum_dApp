@@ -1,0 +1,140 @@
+Compiling your contracts...
+===========================
+> Everything is up to date, there is nothing to compile.
+
+
+Migrations dry-run (simulation)
+===============================
+> Network name:    'rinkeby-fork'
+> Network id:      4
+> Block gas limit: 0x6ade77
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > block number:        4840357
+   > block timestamp:     1564735284
+   > account:             0x2C2a947A472bFE21714B8f8439A55ba2048dc223
+   > balance:             5.987145954
+   > gas used:            246393
+   > gas price:           2 gwei
+   > value sent:          0 ETH
+   > total cost:          0.000492786 ETH
+
+   -------------------------------------
+   > Total cost:         0.000492786 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'AdminPanel'
+   ----------------------
+   > block number:        4840359
+   > block timestamp:     1564735294
+   > account:             0x2C2a947A472bFE21714B8f8439A55ba2048dc223
+   > balance:             5.984934646
+   > gas used:            1078631
+   > gas price:           2 gwei
+   > value sent:          0 ETH
+   > total cost:          0.002157262 ETH
+
+
+   Deploying 'BountyHub'
+   ---------------------
+   > block number:        4840360
+   > block timestamp:     1564735301
+   > account:             0x2C2a947A472bFE21714B8f8439A55ba2048dc223
+   > balance:             5.98133578
+   > gas used:            1799433
+   > gas price:           2 gwei
+   > value sent:          0 ETH
+   > total cost:          0.003598866 ETH
+
+   -------------------------------------
+   > Total cost:         0.005756128 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.006248914 ETH
+
+
+Starting migrations...
+======================
+> Network name:    'rinkeby'
+> Network id:      4
+> Block gas limit: 0x6acfc0
+
+
+1_initial_migration.js
+======================
+
+   Deploying 'Migrations'
+   ----------------------
+   > transaction hash:    0x9bcd7157a22f32d8a5941094add2e69b7be3ad3e7caf3e9c6dc3abd13ed99b4a
+   > Blocks: 0            Seconds: 9
+   > contract address:    0x149dE4A0B40c7b2cdCcD8E6be6D510A55ce92EA5
+   > block number:        4840359
+   > block timestamp:     1564735324
+   > account:             0x2C2a947A472bFE21714B8f8439A55ba2048dc223
+   > balance:             5.98241088
+   > gas used:            261393
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.00522786 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.00522786 ETH
+
+
+2_deploy_contracts.js
+=====================
+
+   Deploying 'AdminPanel'
+   ----------------------
+   > transaction hash:    0x2f79e74597223e3b4711162d4c5937cd5d793f73ead453b70fff8bafc1769cfb
+   > Blocks: 0            Seconds: 9
+   > contract address:    0x09957eA02AFa9182f1b22F152a1525d40FA7cd21
+   > block number:        4840361
+   > block timestamp:     1564735354
+   > account:             0x2C2a947A472bFE21714B8f8439A55ba2048dc223
+   > balance:             5.9596978
+   > gas used:            1093631
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.02187262 ETH
+
+
+   Deploying 'BountyHub'
+   ---------------------
+   > transaction hash:    0x673699d1d609e697300c05ac931923c227fe1c8dd879a3fe7248008d43efabb9
+   > Blocks: 0            Seconds: 5
+   > contract address:    0xF30f54a636603D7d205e0B192C98Cbe0Ffd71884
+   > block number:        4840362
+   > block timestamp:     1564735369
+   > account:             0x2C2a947A472bFE21714B8f8439A55ba2048dc223
+   > balance:             5.92310914
+   > gas used:            1829433
+   > gas price:           20 gwei
+   > value sent:          0 ETH
+   > total cost:          0.03658866 ETH
+
+
+   > Saving migration to chain.
+   > Saving artifacts
+   -------------------------------------
+   > Total cost:          0.05846128 ETH
+
+
+Summary
+=======
+> Total deployments:   3
+> Final cost:          0.06368914 ETH
