@@ -1,7 +1,7 @@
 
 # Consensys Blockchain Developer Bootcamp Project
 
-## **Bounty dApp**
+## **BountyHub dApp**
 
   
 
@@ -15,7 +15,7 @@ There are 3 access types:
 3) Bounty Hunter - Any 3rd party can be a bounty hunter. On the portal, they can see a list of available bounties. Clicking on a bounty redirects to submission page, where they can submit solutions. They can submit multiple solutions to a single bounty.  
   
   
-
+  
 # Documents
 
   
