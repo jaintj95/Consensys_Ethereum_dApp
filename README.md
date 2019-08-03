@@ -45,28 +45,31 @@ Please check the **docs** folder in this repo for all documents related to proje
 ## Running the dApp
 
 ***Note - You may need to manually refresh pages to view UI updates or State changes.***
-1) Clone this repo
 
-2) Start a development blockchain using ganache-cli
+1) Start a development blockchain using ganache-cli
 
-3) Configure atleast 3 accounts in Metamask using the credentials from the test blockchain. You can either import the mnemonic or manually import accounts using the private keys
+2) Configure atleast 3 accounts in Metamask using the credentials from the test blockchain. You can either import the mnemonic or manually import accounts using the private keys  
 
-4) Open a new terminal and `cd` to the location where the repo was cloned
+3) Clone this repo  
 
-5) Execute `truffle compile` to compile the contracts
+4) Open a new terminal and `cd` to the location where the repo was cloned  
 
-6) Run `truffle migrate` to deploy contracts to test blockchain
+5) Execute `npm install` to install necessary packages (This step is important as project is using an external library from OpenZeppelin).  
 
-7) For evaluating the project, note that 1st acc belongs to admin, 2nd to Job Poster and 3rd to Bounty hunter.
+6) Execute `truffle compile` to compile the contracts
 
-8) Execute `npm run dev` to start the project. A new browser windows should open once everything is initialised. Otherwise, you can manually open [http://localhost:3000/](http://localhost:3000/) in your browser.
+7) Run `truffle migrate` to deploy contracts to test blockchain
 
-9) Interacting with the app  
-9.1) **Admin** account - Initially if you interact with the app using admin account, you'll see an empty panel. Admin only approves, rejects or deletes job posters. Switch to another account to send an approval request.  
-9.2) **Job Poster** account - Use any account except the first account to access BountyHub. You can request access as a job poster by clicking on *Request Job Poster access* button. After requesting access, switch back to admin account using metamask, refresh the browser and approve/reject the Job poster's access using the Admin Panel.  
+8) For evaluating the project, note that 1st acc belongs to admin, 2nd to Job Poster and 3rd to Bounty hunter.
+
+9) Execute `npm run dev` to start the project. A new browser windows should open once everything is initialised. Otherwise, you can manually open [http://localhost:3000/](http://localhost:3000/) in your browser.
+
+10) Interacting with the app  
+10.1) **Admin** account - Initially if you interact with the app using admin account, you'll see an empty panel. Admin only approves, rejects or deletes job posters. Switch to another account to send an approval request.  
+10.2) **Job Poster** account - Use any account except the first account to access BountyHub. You can request access as a job poster by clicking on *Request Job Poster access* button. After requesting access, switch back to admin account using metamask, refresh the browser and approve/reject the Job poster's access using the Admin Panel.  
 Once Job poster is approved, he/she can post Bounties and approve Submissions to bounties. Once a Job poster approves a submission, the bounty amount is transferred to the submitter and bounty is disabled.  
 Note - Remember to Switch to Job Poster account to post bounties.  
-9.3) **Bounty Hunter** account - Again use any account except Admin and Job poster to submit solutions to bounties. You can view all bounties on the hub. Click on a bounty to load the Submission panel. Provide a link to your submission and wait for Job Poster to approve it.
+10.3) **Bounty Hunter** account - Again use any account except Admin and Job poster to submit solutions to bounties. You can view all bounties on the hub. Click on a bounty to load the Submission panel. Provide a link to your submission and wait for Job Poster to approve it.
 
   
 
