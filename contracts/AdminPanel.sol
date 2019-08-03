@@ -9,6 +9,8 @@ contract AdminPanel
     /// Admin
     address admin;
 
+    bool private stopped = false;
+
     /// Map of Job posters approved by admin
     /// 0 -> unapproved
     /// 1 -> poster added to req queue
@@ -24,6 +26,7 @@ contract AdminPanel
 
 
     /// Events related to job posters
+    event LogContractStateChange(bool state);
     event LogPosterDelete(address posterAddr);
     event LogPosterAccessReq(address posterAddr);
     event LogPosterApproved(address posterAddr);
@@ -34,6 +37,13 @@ contract AdminPanel
     modifier verifyAdmin()
     {
         require(msg.sender == admin, 'Only admin can execute this task');
+        _;
+    }
+
+    /// Circuit breaker
+    modifier stopInEmergency()
+    {
+        require(stopped == false, "Requests disabled by admin");
         _;
     }
 
@@ -54,6 +64,17 @@ contract AdminPanel
     {
         return(addr == admin);
     }
+
+
+    /** @dev Toggles contract state in emergency
+	*/
+	function toggleContractState()
+	    public
+	    verifyAdmin()
+	{
+		stopped = !stopped;
+        emit LogContractStateChange(stopped);
+	}
 
     /** @dev Allows admin delete an already approved job poster
 	* @param posterAddr - Address of the Job poster
@@ -144,6 +165,7 @@ contract AdminPanel
 	*/
     function reqAccessFromAdmin(address posterAddr)
         public
+        stopInEmergency()
         returns(bool)
     {
         require(posterAccess[posterAddr] == 0, 'Poster is already approved or pending approval');
@@ -153,6 +175,10 @@ contract AdminPanel
         return true;
     }
 
+    /** @dev Allows anyone to check a poster's access credentials
+	* @param posterAddr - Address of the Job poster
+    * @return uint value that indicates poster's access type
+	*/
     function checkPosterAccess(address posterAddr)
         public
         view
