@@ -5,14 +5,15 @@
 
   
 
-Description: A bounty dApp where people can post or submit work.
+Description: A bounty dApp where people can post or submit work.  
 
-As a job poster, I can create a new bounty. I will set a bounty description and include the amount to be paid for a successful submission. I am able to view a list of bounties that I have already posted. By clicking on a bounty, I can review submissions that have been proposed. I can accept or reject the submitted work. Accepting proposed work will pay the submitter the deposited amount.
-
+There are 3 access types:  
+1) Admin - Owns the portal and can approve, reject or delete job posters.  
   
-
-As a bounty hunter, I can submit work to a bounty for review.
-
+2) Job Poster - Once approved by the admin, they can create a new bounty. They can set a bounty description and include the amount to be paid for a successful submission. They are able to view a list of bounties that they have already posted. By clicking on a bounty, they can review submissions by bounty hunters. They can approve a submission that fits their requirements. Accepting proposed work will pay the submitter the defined amount.  
+  
+3) Bounty Hunter - Any 3rd party can be a bounty hunter. On the portal, they can see a list of available bounties. Clicking on a bounty redirects to submission page, where they can submit solutions. They can submit multiple solutions to a single bounty.  
+  
   
 
 # Documents
