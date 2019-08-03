@@ -1,11 +1,17 @@
 pragma solidity ^0.5.0;
 
+// import "@openzeppelin/contracts/math/SafeMath.sol";
+import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
+
 /**
 * @title AdminPanel
 * @dev Allows Hub-admin to add and remove Job posters and allows Job posters to request access
 */
 contract AdminPanel
 {
+
+    using SafeMath for uint;
+
     /// Admin
     address admin;
 

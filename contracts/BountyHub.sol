@@ -1,6 +1,7 @@
 pragma solidity ^0.5.0;
 
 import './AdminPanel.sol';
+import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 
 /*
 * @title BountyHub
@@ -8,6 +9,8 @@ import './AdminPanel.sol';
 */
 contract BountyHub
 {
+    using SafeMath for uint;
+
     //address public bountyOwner;
     AdminPanel public panelInstance;
 

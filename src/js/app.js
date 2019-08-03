@@ -261,11 +261,13 @@ App = {
         return AdminPanelInstance.fetchApprovedPosterNum({from:account});
       }).then(function(length) 
       {
+        console.log(length.toNumber());
         return App.getApproved(length, account);
       }).then(function(approved) 
       {
         for(i=0; i<approved.length; i++) 
         {
+          //console.log(i);
           approvedTemplate.find('.posterAddress').text(approved[i]);
           deleteButton.attr('data-addr', approved[i]);
           approvedPostersDiv.append(approvedTemplate.html());
@@ -352,21 +354,23 @@ App = {
   {
     let approved = [];
     let AdminPanelInstance = await App.contracts.AdminPanel.deployed();
-
+    console.log(length)
     for(i=0; i<length; i++) 
     {
       let poster = await AdminPanelInstance.fetchApprovedPoster(i);
       let posterType = await AdminPanelInstance.checkPosterAccess(poster, {from:account});
-     //console.log(posterType.toNumber());
+      console.log(posterType.toNumber());
       
       if (posterType.toNumber() === 2) 
       {
         approved.push(poster);
       }
     }
-
+    console.log(approved);
     let set = new Set(approved);
+    console.log(set);
     let vals = set.values();
+    console.log(vals);
     return Array.from(vals);
   },
 
